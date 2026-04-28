@@ -1,5 +1,19 @@
-[gd_scene format=3 uid="uid://ctctvyqngteny"]
+[gd_scene load_steps=3 format=3 uid="uid://ctctvyqngteny"]
+
+[ext_resource type="PackedScene" uid="uid://455mtnkpxpgn" path="res://scenes/player.tscn" id="1_pcauf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x55cm"]
 
 [node name="level" type="Node2D"]
 
-[node name="player" type="CharacterBody2D" parent="."]
+[node name="player" parent="." instance=ExtResource("1_pcauf")]
+position = Vector2(577, 317)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(570, 479)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_x55cm")

@@ -13,6 +13,7 @@ position = Vector2(577, 317)
 position = Vector2(576, 324)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(570, 479)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

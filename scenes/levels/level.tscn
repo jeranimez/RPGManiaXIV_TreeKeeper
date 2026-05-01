@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctctvyqngteny"]
+[gd_scene load_steps=4 format=3 uid="uid://ctctvyqngteny"]
 
 [ext_resource type="PackedScene" uid="uid://455mtnkpxpgn" path="res://scenes/player.tscn" id="1_pcauf"]
+[ext_resource type="PackedScene" uid="uid://0bj2c4wa30bb" path="res://scenes/door.tscn" id="2_0ydly"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x55cm"]
 
@@ -18,3 +19,6 @@ position = Vector2(570, 479)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_x55cm")
+
+[node name="door" parent="." instance=ExtResource("2_0ydly")]
+position = Vector2(865, 224)

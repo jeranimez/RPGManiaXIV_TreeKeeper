@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 10.0
 var click_position = position
+var item = false
+@onready var door = $door
 
 
 
@@ -12,11 +14,17 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("left_click"):
 		click_position = get_global_mouse_position()
+		if door.clicked == true:
+			item = true
+		else:
+			item = false
 	
 	if Input.is_action_pressed("left"):
+		item = false
 		click_position = position
 		position.x -= SPEED
 	elif Input.is_action_pressed("right"):
+		item = false
 		click_position = position
 		position.x += SPEED
 	else:

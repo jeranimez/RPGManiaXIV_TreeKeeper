@@ -12,6 +12,13 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("left_click"):
 		click_position = get_global_mouse_position()
+<<<<<<< Updated upstream
+=======
+		if door.is_clicked() == true:
+			item = true
+		else:
+			item = false
+>>>>>>> Stashed changes
 	
 	if Input.is_action_pressed("left"):
 		click_position = position
@@ -28,3 +35,6 @@ func _physics_process(delta):
 			position.x -= SPEED
 
 	move_and_slide()
+
+func is_item():
+	return item

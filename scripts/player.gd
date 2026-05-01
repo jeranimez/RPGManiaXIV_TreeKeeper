@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 10.0
 var click_position = position
+var item = false
+@onready var door = $door
 
 
 
@@ -21,9 +23,11 @@ func _physics_process(delta):
 >>>>>>> Stashed changes
 	
 	if Input.is_action_pressed("left"):
+		item = false
 		click_position = position
 		position.x -= SPEED
 	elif Input.is_action_pressed("right"):
+		item = false
 		click_position = position
 		position.x += SPEED
 	else:
